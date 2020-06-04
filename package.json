@@ -1,0 +1,23 @@
+{
+  "name": "algorithms-and-data-structures",
+  "version": "1.0.0",
+  "description": "A hands on data structures and algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simaodeveloper/algorithms-and-data-structures.git"
+  },
+  "author": "Daniel Simão da Silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simaodeveloper/algorithms-and-data-structures/issues"
+  },
+  "homepage": "https://github.com/simaodeveloper/algorithms-and-data-structures#readme",
+  "dependencies": {
+    "jest": "^26.0.1"
+  }
+}

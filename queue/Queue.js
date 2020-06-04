@@ -1,23 +1,33 @@
 module.exports = class Queue {
   constructor() {
-    this.list = [];
-    this.length = 0;
+    this.head = 0;
+    this.tail = 0;
   }
 
-  enqueue(object) {
-    this.list.push(object);
-    this.length++;
+  enqueue(item) {
+    this[this.tail] = item;
+    this.tail++;
   }
 
   dequeue() {
-    if (this.length === 0) return;
+    if (this.size() === 0) return;
 
-    this.length--;
-    return this.list.shift();
+    const item = this[this.head];
+
+    delete this[this.head];
+
+    this.head++;
+
+    if (this.head === this.tail) {
+      this.head = 0;
+      this.tail = 0;
+    }
+
+    return item;
   }
 
   size() {
-    return this.length;
+    return this.tail - this.head;
   }
 
   isEmpty() {
@@ -25,6 +35,6 @@ module.exports = class Queue {
   }
 
   peek() {
-    return this.list[0];
+    return this[this.head];
   }
 };

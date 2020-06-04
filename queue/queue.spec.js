@@ -51,7 +51,12 @@ describe("queue", () => {
 
     queue.enqueue("John");
     queue.enqueue("Doe");
-
     expect(queue.peek()).toEqual("John");
+
+    queue.dequeue();
+    expect(queue.peek()).toEqual("Doe");
+
+    queue.dequeue();
+    expect(queue.peek()).toEqual(undefined);
   });
 });
